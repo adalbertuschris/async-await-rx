@@ -1,0 +1,23 @@
+{
+  "name": "async-await-rx",
+  "version": "7.0.0",
+  "description": "Extension for rxjs library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/async-await-rx/core.git"
+  },
+  "keywords": [
+    "rxjs",
+    "async await",
+    "typescript"
+  ],
+  "author": "Wojciech Krzysztofowicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/async-await-rx/core/issues"
+  },
+  "homepage": "https://github.com/async-await-rx/core#readme",
+  "peerDependencies": {
+    "rxjs": "^6.5.3 || ^7.4.0"
+  }
+}
