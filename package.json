@@ -6,6 +6,34 @@
     "type": "git",
     "url": "git+https://github.com/async-await-rx/core.git"
   },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc --build tsconfig.cjs.json tsconfig.esm.json tsconfig.esm5.json tsconfig.types.json"
+  },
+  "files": [
+    "dist/cjs",
+    "dist/esm",
+    "dist/esm5",
+    "dist/typings",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "main": "./dist/cjs/public_api.js",
+  "module": "./dist/esm5/public_api.js",
+  "es2015": "./dist/esm/public_api.js",
+  "typings": "./dist/typings/public_api.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./dist/typings/public_api.d.ts",
+      "es2015": "./dist/esm/public_api.js",
+      "node": "./dist/cjs/public_api.js",
+      "require": "./dist/cjs/public_api.js",
+      "default": "./dist/esm5/public_api.js"
+    }
+  },
   "keywords": [
     "rxjs",
     "async await",
@@ -17,7 +45,13 @@
     "url": "https://github.com/async-await-rx/core/issues"
   },
   "homepage": "https://github.com/async-await-rx/core#readme",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
   "peerDependencies": {
     "rxjs": "^6.5.3 || ^7.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
   }
 }
