@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "module": "es2015",
+      "target": "es5",
+      "importHelpers": true,
+      "downlevelIteration": true,
+      "outDir": "./dist/esm5"
+    }
+  }

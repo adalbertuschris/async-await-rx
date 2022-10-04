@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "stripInternal": true,
+    "noEmit": false,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "target": "esnext",
+    "baseUrl": "./",
+  },
+  "include": ["src/**/*.ts"]
+}
