@@ -165,6 +165,9 @@ index - value index
 data - array with values from each action
 type - returned type
 
+* action - (value, index, data) => void
+This acton has no impact on asyncPipe result. Used to perform side-effects.
+
 * awaitAction - (value, index, data) => Observable<any>
 Action will be completed when observable have fulfilled.
 
@@ -176,6 +179,3 @@ As second param it determine execution strategy:
 AwaitAllStrategy:
  * parallel (default) - actions are processing parallel
  * oneByOne - actions are processing one by one
-
-* action - (value, index, data) => void
-This acton has no impact on asyncPipe result. Used to perform side-effects.
