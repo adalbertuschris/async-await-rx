@@ -69,7 +69,7 @@ action1()
     switchMap((data) =>
       action4(data[2]).pipe(map((value) => [...data, value]))
     ),
-    takeUntil(cancel),
+    takeUntil(cancel$),
     finalize(() => (isLoading = false))
   )
   .subscribe(([val1, val2, val3]) => {
@@ -152,9 +152,9 @@ asyncPipe(
         action2(),
     ]),
     awaitAction(() => omit(action3(), something == 5)), // this action will be omitted, because condition is met
-    action((value) => console.log(value)), // [action1]
+    action((value) => console.log(value)), // [action2]
     awaitAction(() => action4())
-).subscribe(([_, data]) => console.log(data)); // [[action1], action4]
+).subscribe(([_, data]) => console.log(data)); // [[action2], action4]
 ```
 
 ### Operators
