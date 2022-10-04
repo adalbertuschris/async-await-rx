@@ -26,6 +26,9 @@ This extension can be useful when:
 
 ## Usage
 
+StackBlitz examples (https://stackblitz.com/edit/rxjs-uwwzxh?devtoolsheight=100&file=index.ts)
+
+
 Comparizon with plain rxjs
 
 code with async pipe extension
