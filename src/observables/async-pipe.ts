@@ -3,10 +3,7 @@ import { asyncPipeInternal } from '../internal/async-pipe-internal';
 import { Action } from '../internal/types';
 
 export function asyncPipe<A>(a1: Action<unknown, A>): Observable<[A, [A]]>;
-export function asyncPipe<A, B>(
-  a1: Action<unknown, A>,
-  a2: Action<A, B>
-): Observable<[B, [A, B]]>;
+export function asyncPipe<A, B>(a1: Action<unknown, A>, a2: Action<A, B>): Observable<[B, [A, B]]>;
 export function asyncPipe<A, B, C>(
   a1: Action<unknown, A>,
   a2: Action<A, B>,
@@ -86,7 +83,7 @@ export function asyncPipe<A, B, C, D, E, F, G, H, I, J, K>(
   a8: Action<G, H>,
   a9: Action<H, I>,
   a10: Action<I, J>,
-  a11: Action<J, K>,
+  a11: Action<J, K>
 ): Observable<[K, [A, B, C, D, E, F, G, H, I, J, K]]>;
 export function asyncPipe<A, B, C, D, E, F, G, H, I, J, K>(
   a1: Action<unknown, A>,
@@ -103,8 +100,6 @@ export function asyncPipe<A, B, C, D, E, F, G, H, I, J, K>(
   ...actions: Action<any, any>[]
 ): Observable<[any, any]>;
 
-export function asyncPipe(
-  ...actions: Action<any, any>[]
-): Observable<[any, any[]]> {
+export function asyncPipe(...actions: Action<any, any>[]): Observable<[any, any[]]> {
   return asyncPipeInternal(actions);
 }

@@ -13,4 +13,3 @@ export class Action<T, R> {
 export type ObservableTuple<T> = {
   [K in keyof T]: Observable<T[K]>;
 };
-

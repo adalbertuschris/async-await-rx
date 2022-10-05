@@ -4,26 +4,16 @@ import { filterOmits } from '../internal/utils/filter-omits';
 
 export enum AwaitAllStrategy {
   parallel,
-  oneByOne,
+  oneByOne
 }
 
 export function awaitAll<T, R extends readonly unknown[]>(
-  project: (
-    value: T,
-    index: number,
-    data: any[],
-    actionIndex: number
-  ) => [...ObservableTuple<R>],
+  project: (value: T, index: number, data: any[], actionIndex: number) => [...ObservableTuple<R>],
   strategy?: AwaitAllStrategy
 ): Action<T, R>;
 
 export function awaitAll(
-  project: (
-    value: any,
-    index: number,
-    data: any[],
-    actionIndex: number
-  ) => Observable<any>[],
+  project: (value: any, index: number, data: any[], actionIndex: number) => Observable<any>[],
   strategy: AwaitAllStrategy = AwaitAllStrategy.parallel
 ): Action<any, any> {
   if (strategy === AwaitAllStrategy.oneByOne) {

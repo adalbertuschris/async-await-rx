@@ -9,4 +9,4 @@ export { awaitAction } from './operators/await-action';
 export { awaitAll } from './operators/await-all';
 
 /* Types */
-export { AwaitAllStrategy } from './operators/await-all'
+export { AwaitAllStrategy } from './operators/await-all';
